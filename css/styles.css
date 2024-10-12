@@ -395,9 +395,13 @@ address {
 .portfolio-descr:hover {
   transform: translateY(0%);
 }
-.portfolio-image-continer {
+.image-portfolio-container {
   position: relative;
   overflow: hidden;
+}
+.portfolio-image-continer {
+  position: absolute;
+  transform: translateY(0%);
 }
 .portfolio-paragraph {
   position: absolute;
