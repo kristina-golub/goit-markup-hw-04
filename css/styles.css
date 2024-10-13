@@ -163,6 +163,7 @@ address {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  max-width: 1440px;
 }
 .main-title {
   font-weight: 700;
@@ -313,9 +314,6 @@ address {
   padding-top: 8px;
 }
 .team-icons {
-  width: 40px;
-  height: 40px;
-  fill: ;
 }
 .soc-link {
   width: 40px;
@@ -325,6 +323,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-link:hover {
   background-color: #31d0aa;
@@ -335,16 +334,12 @@ address {
 .svg-icon {
   width: 16px;
   height: 16px;
+  fill: #f4f4fd;
 }
 /* Portfolio */
 .portfolio {
   padding-top: 120px;
   padding-bottom: 120px;
-}
-.svg-icon {
-  width: 16;
-  height: 16;
-  fill: #f4f4fd;
 }
 .title-our-portfolio {
   font-weight: 700;
@@ -362,20 +357,13 @@ address {
   column-gap: 24px;
   row-gap: 48px;
 }
-.portfolio-card {
-  background: #fff;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.portfolio-card:hover {
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  transform: translateY(0%);
-}
+
 .portfolio-container {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
+
 .portfolio-name {
   font-weight: 500;
   font-size: 20px;
@@ -391,18 +379,21 @@ address {
   letter-spacing: 0.02em;
   color: #434455;
 }
-.portfolio-descr:hover {
+.portfolio-card {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-card:hover .portfolio-image-paragraph {
   transform: translateY(0%);
 }
-.image-portfolio-container {
+.portfolio-image-container {
   position: relative;
   overflow: hidden;
 }
-.portfolio-image-continer {
-  position: absolute;
-  transform: translateY(0%);
-}
-.portfolio-paragraph {
+.portfolio-image-paragraph {
   position: absolute;
   top: 0;
   font-size: 16px;
@@ -411,8 +402,8 @@ address {
   color: #f4f4fd;
   padding: 40px 32px;
   background-color: #4d5ae5;
-  height: 100%;
   width: 100%;
+  height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -442,21 +433,26 @@ address {
   display: flex;
   align-items: baseline;
 }
+.footer-soc-media-container {
+  margin-right: 120px;
+}
 .footer-soc-media-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 .footer-soc-items-list {
   display: flex;
   gap: 16px;
+}
+.footer-icons {
   width: 40px;
   height: 40px;
 }
-.footer-icons {
+.footer-soc-link {
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
@@ -466,13 +462,13 @@ address {
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-icons:hover {
+.footer-soc-link:hover {
   background-color: #31d0aa;
 }
-.footer-icons:focus {
+.footer-soc-link:focus {
   background-color: #31d0aa;
 }
-.soc-media-container > svg {
+.footer-soc-items-list svg {
   width: 24;
   height: 24;
 }
