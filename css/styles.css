@@ -468,10 +468,6 @@ address {
 .footer-soc-link:focus {
   background-color: #31d0aa;
 }
-.footer-soc-items-list svg {
-  width: 24;
-  height: 24;
-}
 .footer-soc-icons {
   fill: #f4f4fd;
 }
